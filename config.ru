@@ -1,3 +1,4 @@
-load 'my_rack_app.rb'
+require './application'
 
-Rack::Handler::WEBrick.run Proc.new { |env| ['201', { 'Content-Type' => 'text/html' }, Coisa.index] }
+use Rack::Reloader, 0
+run Application.new
