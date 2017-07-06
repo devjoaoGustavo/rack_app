@@ -28,7 +28,7 @@ class Router
  end
 
  def not_found
-   content = File.open('app/views/404.html').readlines.map(&:chomp)
+   content = File.open('app/views/404.html').readlines
    ['404', { 'Content-Type' => 'text/html; charset=utf-8' }, content]
  end
 

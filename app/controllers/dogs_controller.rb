@@ -6,6 +6,6 @@ class DogsController < BaseController
   private
 
   def content
-    File.open('app/views/index.html').readlines.map(&:chomp)
+    File.open('app/views/index.html').readlines
   end
 end
